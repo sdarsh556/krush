@@ -1,0 +1,173 @@
+.mood-page {
+    max-width: 900px;
+    width: 100%;
+    padding: var(--spacing-2xl) var(--spacing-md);
+    padding-top: 120px;
+    /* Add space for navbar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    /* Center horizontally */
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: var(--bg-glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: var(--radius-full);
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: var(--spacing-xl);
+    animation: slideIn 0.5s ease;
+}
+
+.back-button:hover {
+    transform: translateX(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: rgba(255, 107, 157, 0.3);
+}
+
+.mood-content {
+    animation: fadeIn 0.6s ease;
+    width: 100%;
+}
+
+.mood-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    animation: slideIn 0.6s ease 0.2s backwards;
+}
+
+.mood-page-icon {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto var(--spacing-lg);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: var(--shadow-lg);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.mood-header h2 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    background: var(--gradient-romantic);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.mood-image-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    animation: fadeIn 0.8s ease 0.3s backwards;
+    aspect-ratio: 4/3;
+}
+
+.mood-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 5s ease;
+}
+
+.mood-image:hover {
+    transform: scale(1.1);
+}
+
+.note-card {
+    background: var(--bg-glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-2xl);
+    box-shadow: var(--shadow-lg);
+    animation: fadeIn 0.8s ease 0.4s backwards;
+    position: relative;
+    overflow: hidden;
+}
+
+.note-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 107, 157, 0.1) 0%, transparent 70%);
+    animation: float 6s ease-in-out infinite;
+}
+
+.note-text {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    line-height: 1.8;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+    z-index: 1;
+}
+
+.note-signature {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--primary-pink);
+    text-align: right;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .note-card {
+        padding: var(--spacing-xl);
+    }
+
+    .mood-page-icon {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.mood-link-container {
+    margin: var(--spacing-lg) 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.mood-video-link {
+    display: inline-block;
+    color: var(--primary-pink);
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(255, 107, 157, 0.3);
+    transition: all var(--transition-normal);
+}
+
+.mood-video-link:hover {
+    background: var(--gradient-romantic);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: transparent;
+}

@@ -1,0 +1,48 @@
+.app {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Section Base Styles */
+.section {
+  min-height: 100vh;
+  padding: var(--spacing-2xl) var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.6s ease;
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  /* Center the section */
+  max-width: 100%;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  animation: slideIn 0.6s ease;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: var(--spacing-sm);
+  background: var(--gradient-romantic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--text-secondary);
+  font-weight: 300;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section {
+    padding: var(--spacing-xl) var(--spacing-sm);
+  }
+}
