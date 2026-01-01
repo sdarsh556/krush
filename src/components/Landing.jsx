@@ -1,7 +1,7 @@
 import { Heart, Sparkles, Star, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import './Landing.css';
-import img1 from '../assets/pics/IMG_2895.JPG';
+import img1 from '../assets/pics/IMG_2895.jpg';
 import img2 from '../assets/pics/1f0b19d6-a6e8-4a11-8c47-47c4bd676ccf.JPG';
 import img3 from '../assets/pics/e0e76b4e-7a79-4264-9b53-548c5eaf5264.JPG';
 
