@@ -1,6 +1,9 @@
 import { Heart, Sparkles, Star, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import './Landing.css';
+import img1 from '../assets/pics/IMG_2895.JPG';
+import img2 from '../assets/pics/1f0b19d6-a6e8-4a11-8c47-47c4bd676ccf.JPG';
+import img3 from '../assets/pics/e0e76b4e-7a79-4264-9b53-548c5eaf5264.JPG';
 
 function Landing() {
     const navigate = useNavigate();
@@ -24,14 +27,13 @@ function Landing() {
                 <div className="landing-decoration">
                     <div className="photo-stack">
                         <div className="photo-card card-1">
-                            <img src="/src/assets/pics/IMG_2895.JPG 
-                            " alt="Us" />
+                            <img src={img1} alt="Us" />
                         </div>
                         <div className="photo-card card-2">
-                            <img src="/src/assets/pics/1f0b19d6-a6e8-4a11-8c47-47c4bd676ccf.JPG" alt="Us" />
+                            <img src={img2} alt="Us" />
                         </div>
                         <div className="photo-card card-3">
-                            <img src="/src/assets/pics/e0e76b4e-7a79-4264-9b53-548c5eaf5264.JPG" alt="Us" />
+                            <img src={img3} alt="Us" />
                         </div>
                     </div>
                     <Heart className="floating-icon icon-1" size={40} />
